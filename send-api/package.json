@@ -11,9 +11,7 @@
     "build:tsc": "tsc && tsc-alias",
     "test": "jest --forceExit --detectOpenHandles",
     "lint": "eslint --ignore-path .gitignore --ext .ts src/",
-    "lint:fix": "npm run lint -- --fix",
-    "deploy:prod": "npm run build && pm2 start ecosystem.config.js --only prod",
-    "deploy:dev": "pm2 start ecosystem.config.js --only dev"
+    "lint:fix": "npm run lint -- --fix"
   },
   "dependencies": {
     "@mailchain/sdk": "^0.7.5",
@@ -59,7 +57,6 @@
     "node-config": "^0.0.2",
     "node-gyp": "^9.1.0",
     "nodemon": "^2.0.19",
-    "pm2": "^5.2.0",
     "prettier": "^2.7.1",
     "supertest": "^6.2.4",
     "ts-jest": "^28.0.7",
