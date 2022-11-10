@@ -1,6 +1,6 @@
 {
   "name": "@mailchain/example-send-api",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Mailchain SDK + Express API Server",
   "author": "",
   "license": "MIT",
@@ -14,7 +14,7 @@
     "lint:fix": "npm run lint -- --fix"
   },
   "dependencies": {
-    "@mailchain/sdk": "^0.7.5",
+    "@mailchain/sdk": "^0.8.0",
     "bcrypt": "^5.0.1",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.13.2",
