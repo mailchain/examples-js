@@ -1,8 +1,9 @@
 import { Router } from 'express';
+import passport from 'passport';
 import { Routes } from '@interfaces/routes.interface';
 import MailController from '@/controllers/mail.controller';
 
-class MailRoute implements Routes {
+class AuthenticatedMailRoute implements Routes {
 	public router = Router();
 	private readonly _mailController: MailController;
 
@@ -12,8 +13,8 @@ class MailRoute implements Routes {
 	}
 
 	private initializeRoutes() {
-		this.router.post('/send', this._mailController.postMail);
+		this.router.post('/send', passport.authenticate('bearer', { session: false }), this._mailController.postMail);
 	}
 }
 
-export default MailRoute;
+export default AuthenticatedMailRoute;
