@@ -8,5 +8,5 @@ To run the code:
 
 - Install dependencies `npm install` or `yarn install`.
 - Create test account and get secret recovery phrase.
-- Create `env.development.local` and add secret recovery phrase.
+- Create `.env.development.local` and add secret recovery phrase.
 - Run development `npm run dev` or `yarn dev`.
