@@ -1,7 +1,7 @@
-import { Mailchain, SendMailParams, SendMailResult } from '@mailchain/sdk';
+import { Mailchain, SendMailParams } from '@mailchain/sdk';
 
 class MailService {
-	async send(params: SendMailParams): Promise<SendMailResult> {
+	async send(params: SendMailParams) {
 		const secretRecoveryPhrase = process.env.SECRET_RECOVERY_PHRASE;
 
 		if (secretRecoveryPhrase == null) {
