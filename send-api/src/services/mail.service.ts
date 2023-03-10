@@ -15,7 +15,12 @@ class MailService {
 			params.from = currentUser.address;
 		}
 
-		return await mailchain.sendMail(params);
+		const { data, error } = await mailchain.sendMail(params);
+		if (error) {
+			throw new Error('Mailchain error: ' + error.message);
+		}
+
+		return data;
 	}
 }
 
