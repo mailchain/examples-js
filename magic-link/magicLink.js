@@ -44,12 +44,12 @@ function initializeMagicLink() {
 							'">Sign in</a></p>',
 					},
 				};
-				const response = await mailchain.sendMail(msg);
-
-				if (response.status === 'success') {
-					return;
+				const { data, error } = await mailchain.sendMail(msg);
+				if (error) {
+					throw new Error('Mailchain error', { cause: error });
 				}
-				throw new Error('Mailchain error: ' + response.status);
+				console.log('sent mail', data);
+				return data;
 			},
 			(user) => {
 				return new Promise((resolve, reject) => {
