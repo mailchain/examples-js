@@ -9,9 +9,11 @@ async function main() {
 	];
 
 	for (const address of addresses) {
-		const { data: resolvedAddress, error } = await resolveAddress(address);
-		if (error != null) {
-			console.warn(`ERROR ${address} - not possible to send mail: ${error.type} - ${error.message}`);
+		const { data: resolvedAddress, error: resolveAddressError } = await resolveAddress(address);
+		if (resolveAddressError) {
+			console.warn(
+				`ERROR ${address} - not possible to send mail: ${resolveAddressError.type} - ${resolveAddressError.message}`,
+			);
 			continue;
 		}
 
