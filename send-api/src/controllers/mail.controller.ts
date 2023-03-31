@@ -6,9 +6,9 @@ class MailController {
 
 	public postMail = async (req: Request, res: Response, next: NextFunction): Promise<any> => {
 		try {
-			const sendResult = await this.mailService.send(req.body);
+			await this.mailService.send(req.body);
 
-			return res.status(200).json({ status: sendResult.status });
+			return res.status(200).json({ status: 'success' });
 		} catch (error) {
 			next(error);
 		}

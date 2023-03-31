@@ -1,4 +1,4 @@
-import { resolveAddress } from '@mailchain/sdk';
+import { resolveAddress } from '@mailchain/sdk/internal';
 
 async function main() {
 	const addresses = [
