@@ -22,7 +22,6 @@
 		"baseUrl": "src",
 		"paths": {
 			"@mailchain/sdk": ["../../../dist/packages/sdk"],
-			"@mailchain/signatures/*": ["packages/sdk-js/packages/signatures/src/*"]
 		}
 	},
 	"include": ["src/**/*.ts", "src/**/*.json", ".env"],
