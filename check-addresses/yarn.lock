@@ -961,34 +961,35 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mailchain/addressing@npm:0.19.1":
-  version: 0.19.1
-  resolution: "@mailchain/addressing@npm:0.19.1"
+"@mailchain/addressing@npm:0.20.0":
+  version: 0.20.0
+  resolution: "@mailchain/addressing@npm:0.20.0"
   dependencies:
     "@ethersproject/transactions": ^5.7.0
-    "@mailchain/crypto": 0.19.1
-    "@mailchain/encoding": 0.19.1
+    "@mailchain/crypto": 0.20.0
+    "@mailchain/encoding": 0.20.0
     "@noble/hashes": ^1.3.0
     "@polkadot/util-crypto": 10.1.11
-  checksum: e7172bc26748723dcd13aec1c117dc2676ad439436023b156f5d0f4c74e44b08b6eea781a8f04791ef635a36b16882f95f369e7b27ef8a792b56dad96267d344
+    lodash: ^4.17.21
+  checksum: 2878468c6d15e120a59555ae641f4a884bc442bc4c6bfe91fcbf5c5db43aa05dd518dc956e90ac6abef6ce4a8e2f92f4f24c6468501998694275001e4b1dc95f
   languageName: node
   linkType: hard
 
-"@mailchain/api@npm:0.19.1":
-  version: 0.19.1
-  resolution: "@mailchain/api@npm:0.19.1"
+"@mailchain/api@npm:0.20.0":
+  version: 0.20.0
+  resolution: "@mailchain/api@npm:0.20.0"
   dependencies:
-    "@mailchain/crypto": 0.19.1
-    "@mailchain/encoding": 0.19.1
+    "@mailchain/crypto": 0.20.0
+    "@mailchain/encoding": 0.20.0
     axios: 1.3.4
     lodash: ^4.17.21
-  checksum: 80c94c2c6664cd475aae319a43dc092ff26b4185e0c9aaecbe89254270e90bd32bbf18eb9b736cb6613d620a4ad48ba06429dc3686b33265cc19a5793c3c4950
+  checksum: e8174536781e78dea2effc653610046189386e6d71982b1168866feedb4124ce901e78c46b7cb16ca95b3d7844c1179350461ecdd05a97f7f8ae384732341559
   languageName: node
   linkType: hard
 
-"@mailchain/crypto@npm:0.19.1":
-  version: 0.19.1
-  resolution: "@mailchain/crypto@npm:0.19.1"
+"@mailchain/crypto@npm:0.20.0":
+  version: 0.20.0
+  resolution: "@mailchain/crypto@npm:0.20.0"
   dependencies:
     "@ethersproject/signing-key": 5.6.2
     "@noble/curves": ^0.8.2
@@ -999,17 +1000,17 @@ __metadata:
     lodash: ^4.17.21
     secp256k1: ^4.0.2
     tweetnacl: ^1.0.3
-  checksum: 35263ee1b3f387fd7bad1031d423b4104bc150e070621df3714e51c40896df4724b971500fd509879a44802236a4688411d320513eb84272d28e3f26a332a9ed
+  checksum: 50cbba6b1b9f662e305e2013c3f33f7b3508530063c7b58c0527b1b2123bfc08d34d7540ddad4b0d039631c7c10836e5045c5fb1bb37ae07d5ec642738bf2612
   languageName: node
   linkType: hard
 
-"@mailchain/encoding@npm:0.19.1":
-  version: 0.19.1
-  resolution: "@mailchain/encoding@npm:0.19.1"
+"@mailchain/encoding@npm:0.20.0":
+  version: 0.20.0
+  resolution: "@mailchain/encoding@npm:0.20.0"
   dependencies:
     "@noble/hashes": ^1.3.0
     "@polkadot/util-crypto": 10.1.11
-  checksum: 104ffe6c4d49b2a2d203d76b886a444963890fe5f4e842ddfc46a6e615d9b06b9357e2396b29d7225ee1ae8f62f7b60169e5ab424ce31c95e190fe061f02f61a
+  checksum: 83f8f0832bc8a822d16f9089e77f9124a26186dd6aa1aaa38920328cf0596590964300ebfe4bc3b7d1084eb626a2cb3339ffad4e9564fd90b341b0f72b52885c
   languageName: node
   linkType: hard
 
@@ -1017,7 +1018,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@mailchain/example-check-addresses@workspace:."
   dependencies:
-    "@mailchain/sdk": 0.19.1
+    "@mailchain/sdk": 0.20.0
     "@rollup/plugin-terser": ^0.4.0
     "@rollup/plugin-typescript": ^11.0.0
     "@swc/cli": ^0.1.57
@@ -1036,17 +1037,17 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@mailchain/internal@npm:0.19.1":
-  version: 0.19.1
-  resolution: "@mailchain/internal@npm:0.19.1"
+"@mailchain/internal@npm:0.20.0":
+  version: 0.20.0
+  resolution: "@mailchain/internal@npm:0.20.0"
   dependencies:
-    "@mailchain/addressing": 0.19.1
-    "@mailchain/api": 0.19.1
-    "@mailchain/crypto": 0.19.1
-    "@mailchain/encoding": 0.19.1
-    "@mailchain/keyring": 0.19.1
-    "@mailchain/message-composer": 0.19.1
-    "@mailchain/signatures": 0.19.1
+    "@mailchain/addressing": 0.20.0
+    "@mailchain/api": 0.20.0
+    "@mailchain/crypto": 0.20.0
+    "@mailchain/encoding": 0.20.0
+    "@mailchain/keyring": 0.20.0
+    "@mailchain/message-composer": 0.20.0
+    "@mailchain/signatures": 0.20.0
     "@noble/hashes": ^1.3.0
     axios: 1.3.4
     canonicalize: ^1.0.8
@@ -1054,55 +1055,55 @@ __metadata:
     emailjs-mime-parser: ^2.0.7
     lodash: ^4.17.21
     protobufjs: 7.1.1
-  checksum: 04b0adf98d0f326e0d6d7ca0062fab1e0be6ee326e8b109c5d87b162d15eb6de016270534d37b2244c28b5292246e698533559de6719bd979e0fc0b4facae323
+  checksum: ee4d3117e354b0404628bf3ad7a2b8364ca7e7a346cc391ed03f1c1247ccc6630ba3336ba588015db700c7d0fb5d032233988324792c0c613ce8ced43e225508
   languageName: node
   linkType: hard
 
-"@mailchain/keyring@npm:0.19.1":
-  version: 0.19.1
-  resolution: "@mailchain/keyring@npm:0.19.1"
+"@mailchain/keyring@npm:0.20.0":
+  version: 0.20.0
+  resolution: "@mailchain/keyring@npm:0.20.0"
   dependencies:
-    "@mailchain/addressing": 0.19.1
-    "@mailchain/crypto": 0.19.1
-    "@mailchain/encoding": 0.19.1
-  checksum: 59b7e19b35d6f0e80750d652ba08d06d43b97ed94d045d502c7a087bc019a8d93daa8d006df681f442538f0d8f7f418984cb5374d423f15319373a60d3956410
+    "@mailchain/addressing": 0.20.0
+    "@mailchain/crypto": 0.20.0
+    "@mailchain/encoding": 0.20.0
+  checksum: bd226ff446317ace7ac7f5daef0c942d488c65bc7e6e1bcaa509292a0159fd366211f791cf9ca0451faf41a505eacefa4c08bef0cd63620e5b784774c1556a54
   languageName: node
   linkType: hard
 
-"@mailchain/message-composer@npm:0.19.1":
-  version: 0.19.1
-  resolution: "@mailchain/message-composer@npm:0.19.1"
+"@mailchain/message-composer@npm:0.20.0":
+  version: 0.20.0
+  resolution: "@mailchain/message-composer@npm:0.20.0"
   dependencies:
-    "@mailchain/encoding": 0.19.1
+    "@mailchain/encoding": 0.20.0
     date-fns: ^2.29.2
-  checksum: 478abc76259b551b6db1db35f40a85d2370972b00e32abeaa2b38058c7a43a465f48afede26a56b5d4b2d5919c07b0f301cd5581fe68cb4581619793627874ea
+  checksum: 230ea4acddb17b46baa0d447a07fd1e36d680be07f5c9bc9e9b6082221c86d69887e170dc1894f60f23affbcd66c8d6a13168dacdf16ceb3041911724bce3f35
   languageName: node
   linkType: hard
 
-"@mailchain/sdk@npm:0.19.1":
-  version: 0.19.1
-  resolution: "@mailchain/sdk@npm:0.19.1"
+"@mailchain/sdk@npm:0.20.0":
+  version: 0.20.0
+  resolution: "@mailchain/sdk@npm:0.20.0"
   dependencies:
-    "@mailchain/crypto": 0.19.1
-    "@mailchain/encoding": 0.19.1
-    "@mailchain/internal": 0.19.1
-    "@mailchain/keyring": 0.19.1
-  checksum: 28c733122a5b31b4befb2d57ac722bba86ae9015d559c841c1248f55d5b2aaeccbf9901222b5fb12471a2820d90fb03db03711f5a10bae22bf93d86a123feca4
+    "@mailchain/crypto": 0.20.0
+    "@mailchain/encoding": 0.20.0
+    "@mailchain/internal": 0.20.0
+    "@mailchain/keyring": 0.20.0
+  checksum: 3579db8e671d31cba84c679561da8f9b17749c7b04febe0de87f49f96d8e882ab48679e0b8c1d97627697cf24e670654cbee7e41eb49436f7e847be425b3c544
   languageName: node
   linkType: hard
 
-"@mailchain/signatures@npm:0.19.1":
-  version: 0.19.1
-  resolution: "@mailchain/signatures@npm:0.19.1"
+"@mailchain/signatures@npm:0.20.0":
+  version: 0.20.0
+  resolution: "@mailchain/signatures@npm:0.20.0"
   dependencies:
     "@ethersproject/hash": 5.7.0
-    "@mailchain/addressing": 0.19.1
-    "@mailchain/crypto": 0.19.1
-    "@mailchain/encoding": 0.19.1
+    "@mailchain/addressing": 0.20.0
+    "@mailchain/crypto": 0.20.0
+    "@mailchain/encoding": 0.20.0
     "@polkadot/util-crypto": 10.1.11
     canonicalize: ^1.0.8
     lodash: ^4.17.21
-  checksum: e7fa4cb9b2f09731c38d950917060c79e17ec242908b3d8d270e396841479bf62c6a450d6c50f5430488727c84a917aa700b5a8a32c7d2d4e67f7e57ae133e08
+  checksum: f5ca7efe8ea53fc23ffbf716ec3b986039e08274287759aea9c560c2e588e7e15659303aa3a40e221d18c5fb886f589f00e3fad7cd0f6b470cf75244d0aec056
   languageName: node
   linkType: hard
 
