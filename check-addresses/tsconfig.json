@@ -21,7 +21,7 @@
 		"importHelpers": true,
 		"baseUrl": "src",
 		"paths": {
-			"@mailchain/sdk": ["../../../dist/packages/sdk"]
+			"@mailchain/sdk": ["../../../.output/build/packages/sdk"]
 		}
 	},
 	"include": ["src/**/*.ts", "src/**/*.json", ".env"],
