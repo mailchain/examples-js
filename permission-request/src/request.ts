@@ -24,11 +24,7 @@ async function sendRandomVcRequestMessage() {
 
 	const appPrivateMessagingKey = privateMessagingKeyFromHex(appPrivateMessagingKeyHex);
 
-	const messageSender = VerifiablePresentationRequestSender.fromSenderMessagingKey(appPrivateMessagingKey, {
-		apiPath: 'http://localhost:8080',
-		mailchainAddressDomain: 'mailchain.local', //TODO: REMOVE
-		nearRpcUrl: 'https://rpc.near.org',
-	});
+	const messageSender = VerifiablePresentationRequestSender.fromSenderMessagingKey(appPrivateMessagingKey);
 
 	const requestId = encodeHex(secureRandom(32));
 	const nonce = encodeHex(secureRandom(32));
