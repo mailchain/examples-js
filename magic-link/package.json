@@ -1,6 +1,6 @@
 {
 	"name": "@mailchain/magic-link-todos",
-	"version": "0.0.20",
+	"version": "0.0.21",
 	"private": true,
 	"description": "Starter todo app using Express, Passport, and Mailchain for sign in.",
 	"keywords": [
@@ -14,7 +14,7 @@
 		"start": "node ./bin/www"
 	},
 	"dependencies": {
-		"@mailchain/sdk": "0.27.0",
+		"@mailchain/sdk": "0.28.0",
 		"connect-sqlite3": "^0.9.13",
 		"cookie-parser": "~1.4.4",
 		"debug": "~2.6.9",
