@@ -11,6 +11,7 @@
 		"mailchain"
 	],
 	"scripts": {
+		"build:ci": "npx tsc --project ./tsconfig.build.json",
 		"request": "ts-node ./src/request.ts",
 		"serve": "ts-node ./src/server.ts"
 	},

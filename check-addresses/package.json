@@ -10,7 +10,7 @@
 	"scripts": {
 		"start": "npm run build && node dist/index.mjs",
 		"dev": "ts-node --transpile-only src/index.ts",
-		"build": "rollup -c",
+		"build:ci": "npx tsc --project ./tsconfig.build.json",
 		"build:tsc": "tsc && tsc-alias",
 		"test": "jest --passWithNoTests --forceExit --detectOpenHandles",
 		"lint": "eslint --ignore-path .gitignore --ext .ts src/",
