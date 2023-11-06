@@ -1,6 +1,6 @@
 {
 	"name": "@mailchain/permission-request",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "Demo of Mailchain permissions request",
 	"keywords": [
 		"example",
@@ -17,9 +17,9 @@
 	},
 	"license": "Unlicense",
 	"dependencies": {
-		"@mailchain/crypto": "0.28.0",
-		"@mailchain/encoding": "0.28.0",
-		"@mailchain/sdk": "0.28.0",
+		"@mailchain/crypto": "0.29.0",
+		"@mailchain/encoding": "0.29.0",
+		"@mailchain/sdk": "0.29.0",
 		"dotenv": "^16.3.1",
 		"express": "~4.16.1"
 	},
