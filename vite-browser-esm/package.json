@@ -1,0 +1,26 @@
+{
+	"name": "vite-browser-esm",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview"
+	},
+	"dependencies": {
+		"@mailchain/addressing": "file:../../../.output/build/packages/addressing",
+		"@mailchain/api": "file:../../../.output/build/packages/api",
+		"@mailchain/crypto": "file:../../../.output/build/packages/crypto",
+		"@mailchain/encoding": "file:../../../.output/build/packages/encoding",
+		"@mailchain/internal": "file:../../../.output/build/packages/internal",
+		"@mailchain/keyring": "file:../../../.output/build/packages/keyring",
+		"@mailchain/message-composer": "file:../../../.output/build/packages/message-composer",
+		"@mailchain/sdk": "file:../../../.output/build/packages/sdk",
+		"@mailchain/signatures": "file:../../../.output/build/packages/signatures"
+	},
+	"devDependencies": {
+		"vite": "^4.4.5",
+		"vite-plugin-node-polyfills": "^0.15.0"
+	}
+}

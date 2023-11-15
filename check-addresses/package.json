@@ -25,7 +25,6 @@
 		"@types/node": "^20.1.2",
 		"jest": "^28.1.1",
 		"rollup": "^3.15.0",
-		"ts-jest": "^28.0.7",
 		"ts-node": "^10.9.1",
 		"tsc-alias": "^1.7.0",
 		"tsconfig-paths": "^4.0.0",

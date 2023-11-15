@@ -1,0 +1,21 @@
+{
+	"name": "node-cjs",
+	"description": "Minimal example of Mailchain SDK used in Node with CJS support",
+	"main": "index.js",
+	"type": "commonjs",
+	"scripts": {
+		"start": "SECRET_RECOVERY_PHRASE=\"\" node src/index.js",
+		"start:ci": "node src/index.js"
+	},
+	"dependencies": {
+		"@mailchain/addressing": "file:../../../.output/build/packages/addressing",
+		"@mailchain/api": "file:../../../.output/build/packages/api",
+		"@mailchain/crypto": "file:../../../.output/build/packages/crypto",
+		"@mailchain/encoding": "file:../../../.output/build/packages/encoding",
+		"@mailchain/internal": "file:../../../.output/build/packages/internal",
+		"@mailchain/keyring": "file:../../../.output/build/packages/keyring",
+		"@mailchain/message-composer": "file:../../../.output/build/packages/message-composer",
+		"@mailchain/sdk": "file:../../../.output/build/packages/sdk",
+		"@mailchain/signatures": "file:../../../.output/build/packages/signatures"
+	}
+}

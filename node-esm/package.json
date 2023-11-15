@@ -1,0 +1,21 @@
+{
+	"name": "node-esm",
+	"description": "Minimal example of Mailchain SDK used in Node with ESM support",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"start": "SECRET_RECOVERY_PHRASE=\"\" node --preserve-symlinks src/index.js",
+		"start:ci": "node --preserve-symlinks src/index.js"
+	},
+	"dependencies": {
+		"@mailchain/addressing": "link:../../../.output/build/packages/addressing",
+		"@mailchain/api": "link:../../../.output/build/packages/api",
+		"@mailchain/crypto": "link:../../../.output/build/packages/crypto",
+		"@mailchain/encoding": "link:../../../.output/build/packages/encoding",
+		"@mailchain/internal": "link:../../../.output/build/packages/internal",
+		"@mailchain/keyring": "link:../../../.output/build/packages/keyring",
+		"@mailchain/message-composer": "link:../../../.output/build/packages/message-composer",
+		"@mailchain/sdk": "link:../../../.output/build/packages/sdk",
+		"@mailchain/signatures": "link:../../../.output/build/packages/signatures"
+	}
+}

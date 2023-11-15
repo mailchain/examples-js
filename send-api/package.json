@@ -9,7 +9,6 @@
 		"dev": "cross-env NODE_ENV=development nodemon",
 		"build": "swc src -d dist --source-maps --copy-files",
 		"build:tsc": "tsc && tsc-alias",
-		"test": "jest --forceExit --detectOpenHandles",
 		"lint": "eslint --ignore-path .gitignore --ext .ts src/",
 		"lint:fix": "npm run lint -- --fix"
 	},
@@ -42,7 +41,6 @@
 		"node-gyp": "^9.1.0",
 		"nodemon": "^2.0.20",
 		"supertest": "^6.2.4",
-		"ts-jest": "^28.0.7",
 		"ts-node": "^10.9.1",
 		"tsc-alias": "^1.7.0",
 		"tsconfig-paths": "^4.0.0",
