@@ -8,6 +8,9 @@
 		"start:ci": "node src/index.js"
 	},
 	"dependencies": {
+		"@mailchain/sdk": "*"
+	},
+	"resolutions": {
 		"@mailchain/addressing": "file:../../../.output/build/packages/addressing",
 		"@mailchain/api": "file:../../../.output/build/packages/api",
 		"@mailchain/crypto": "file:../../../.output/build/packages/crypto",

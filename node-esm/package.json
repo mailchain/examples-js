@@ -8,14 +8,17 @@
 		"start:ci": "node --preserve-symlinks src/index.js"
 	},
 	"dependencies": {
-		"@mailchain/addressing": "link:../../../.output/build/packages/addressing",
-		"@mailchain/api": "link:../../../.output/build/packages/api",
-		"@mailchain/crypto": "link:../../../.output/build/packages/crypto",
-		"@mailchain/encoding": "link:../../../.output/build/packages/encoding",
-		"@mailchain/internal": "link:../../../.output/build/packages/internal",
-		"@mailchain/keyring": "link:../../../.output/build/packages/keyring",
-		"@mailchain/message-composer": "link:../../../.output/build/packages/message-composer",
-		"@mailchain/sdk": "link:../../../.output/build/packages/sdk",
-		"@mailchain/signatures": "link:../../../.output/build/packages/signatures"
+		"@mailchain/sdk": "*"
+	},
+	"resolutions": {
+		"@mailchain/addressing": "file:../../../.output/build/packages/addressing",
+		"@mailchain/api": "file:../../../.output/build/packages/api",
+		"@mailchain/crypto": "file:../../../.output/build/packages/crypto",
+		"@mailchain/encoding": "file:../../../.output/build/packages/encoding",
+		"@mailchain/internal": "file:../../../.output/build/packages/internal",
+		"@mailchain/keyring": "file:../../../.output/build/packages/keyring",
+		"@mailchain/message-composer": "file:../../../.output/build/packages/message-composer",
+		"@mailchain/sdk": "file:../../../.output/build/packages/sdk",
+		"@mailchain/signatures": "file:../../../.output/build/packages/signatures"
 	}
 }
