@@ -12,8 +12,8 @@ The repository is an ever growing list of example projects on how to use [Mailch
 
 ## Find out more
 
-We'd :heart: for you to join our growing community on [Discord](https://discord.gg/2gqGpagbhe). It's the best place to reach us and get involved.
+We'd :heart: for you to join our growing community and get involved.
 
 Follow [@mailchain_xyz](https://twitter.com/mailchain_xyz) on Twitter to hear about new releases and updates.
 
-If Discord isn’t right for you, contact us via traditional [email](mailto:team@mailchain.co).
+Other channels to reach us can be found here: [https://docs.mailchain.com/getting-help/](https://docs.mailchain.com/getting-help/).
