@@ -1,0 +1,16 @@
+{
+	"name": "@mailchain/permission-request",
+	"version": "0.0.3",
+	"description": "Exracted messages using Mailchain SDK",
+	"scripts": {
+		"get-messages": "node ./src/get-messages.mjs"
+	},
+	"license": "Unlicense",
+	"dependencies": {
+		"@mailchain/crypto": "0.29.0",
+		"@mailchain/encoding": "0.29.0",
+		"@mailchain/internal": "0.29.0",
+		"@mailchain/keyring": "0.29.0",
+		"mailparser": "3.9.0"
+	}
+}
