@@ -13,9 +13,11 @@ npm install
 ```
 
 ## Usage
+
+Run as a 1-line command:
+
 ```bash
-SECRET_RECOVERY_PHRASE="word ..."
-npm run get-messages
+SECRET_RECOVERY_PHRASE="word ..." npm run get-messages
 ```
 - The script fetches every page of inbox and sent messages, respecting `MAILCHAIN_PAGE_SIZE` (default `25`).
 - Message data is written into `output/<category>/<owner>/` where each `.json` contains headers plus decoded text; any HTML part is saved alongside as `.html`.
