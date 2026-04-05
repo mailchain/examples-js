@@ -23,3 +23,7 @@ npm run get-messages
 ## Notes
 - Set `MAILCHAIN_OUTPUT_DIR` to redirect the export folder.
 - Failures to parse MIME bodies fall back to the raw UTF-8 payload and log a warning so you know which message needs manual review.
+
+## How to find your Secret Recorvery Phrase
+
+To export your Secret Recovery Phrase, please see this article: https://docs.mailchain.com/user/guides/settings/secret-recovery-phrase/
