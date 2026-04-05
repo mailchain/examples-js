@@ -6,13 +6,49 @@ const require = createRequire(import.meta.url);
 const { MailchainMailboxOperations } = require('@mailchain/internal/mailbox');
 const { defaultConfiguration } = require('@mailchain/internal/configuration');
 const { KeyRing } = require('@mailchain/keyring');
-const { publicKeyToBytes } = require('@mailchain/crypto');
-const { encodeHex } = require('@mailchain/encoding');
+const { publicKeyToBytes, ED25519PrivateKey } = require('@mailchain/crypto');
+const { encodeHex, decodeHexAny } = require('@mailchain/encoding');
 const { simpleParser } = require('mailparser');
 
-const secretRecoveryPhrase = process.env.SECRET_RECOVERY_PHRASE;
-if (!secretRecoveryPhrase) {
-	throw new Error('SECRET_RECOVERY_PHRASE environment variable not set');
+function createKeyRing() {
+	const phrase = process.env.SECRET_RECOVERY_PHRASE;
+	const seedHex = process.env.MAILCHAIN_ED25519_SEED_HEX;
+	const secretKeyHex = process.env.MAILCHAIN_ED25519_SECRET_KEY_HEX;
+
+	const sources = [phrase && 'SECRET_RECOVERY_PHRASE', seedHex && 'MAILCHAIN_ED25519_SEED_HEX', secretKeyHex && 'MAILCHAIN_ED25519_SECRET_KEY_HEX'].filter(Boolean);
+
+	if (sources.length > 1) {
+		throw new Error(`Only one credential source may be set, but found: ${sources.join(', ')}.`);
+	}
+
+	if (phrase) {
+		return KeyRing.fromSecretRecoveryPhrase(phrase);
+	}
+
+	if (seedHex) {
+		const bytes = decodeHexAny(seedHex);
+		if (bytes.length !== 32) {
+			throw new Error(`MAILCHAIN_ED25519_SEED_HEX must decode to 32 bytes (got ${bytes.length}).`);
+		}
+		return KeyRing.fromPrivateKey(ED25519PrivateKey.fromSeed(bytes));
+	}
+
+	if (secretKeyHex) {
+		const bytes = decodeHexAny(secretKeyHex);
+		if (bytes.length !== 64) {
+			throw new Error(`MAILCHAIN_ED25519_SECRET_KEY_HEX must decode to 64 bytes (got ${bytes.length}).`);
+		}
+		return KeyRing.fromPrivateKey(ED25519PrivateKey.fromSecretKey(bytes));
+	}
+
+	throw new Error(
+		'No credentials provided. Set one of:\n' +
+			'  SECRET_RECOVERY_PHRASE="…"          (24-word mnemonic, recommended)\n' +
+			'  MAILCHAIN_ED25519_SEED_HEX="…"      (32-byte hex seed, advanced)\n' +
+			'  MAILCHAIN_ED25519_SECRET_KEY_HEX="…" (64-byte hex secret key, advanced)\n' +
+			'Use one line: SECRET_RECOVERY_PHRASE="…" npm run get-messages, ' +
+			'or run export SECRET_RECOVERY_PHRASE="…" before npm run get-messages.',
+	);
 }
 
 const pageSize = Number.parseInt(process.env.MAILCHAIN_PAGE_SIZE ?? '25', 10);
@@ -22,7 +58,7 @@ if (!Number.isFinite(pageSize) || pageSize <= 0) {
 
 const outputDir = resolve(process.cwd(), process.env.MAILCHAIN_OUTPUT_DIR ?? 'output');
 
-const keyRing = KeyRing.fromSecretRecoveryPhrase(secretRecoveryPhrase);
+const keyRing = createKeyRing();
 const mailboxOperations = MailchainMailboxOperations.create(defaultConfiguration, keyRing, null);
 
 function sanitizeSegment(value, fallback) {
