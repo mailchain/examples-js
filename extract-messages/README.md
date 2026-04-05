@@ -2,6 +2,8 @@
 
 Grab every inbox and sent message using the Mailchain SDK so you can inspect the decrypted payloads locally.
 
+> **New to this?** Read the full [step-by-step tutorial](TUTORIAL.md).
+
 ## Requirements
 - Node.js 18+
 - A Mailchain account with a `SECRET_RECOVERY_PHRASE`
